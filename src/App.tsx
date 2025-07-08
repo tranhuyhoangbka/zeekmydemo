@@ -1,12 +1,24 @@
 import { Button } from "@/components/ui/button"
-import Page from "./app/dashboard/page"
+import Dashboard from "./app/dashboard/page"
+import Estimates from "./app/estimate_histories/page"
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./app/globals.css"
 
 
 function App() {
   return (
     <div className="flex min-h-svh flex-col items-center justify-center">
-      <Page></Page>
+      <Routes>
+        {/* public routes */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/estimates" element={<Estimates />} />
+
+        {/* protected routes */}
+   
+
+        {/* fallback nếu không khớp bất kỳ route nào */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </div>
   )
 }

@@ -4,7 +4,7 @@
     "type": "購入",
     "date": "2025-06-20",
     "model": "Zeekr 009 Pro",
-    "price": 5690000,
+    "price": "200万円",
     "status": "確認中",
     "depositPaid": true
   },
@@ -13,7 +13,7 @@
     "type": "予約",
     "date": "2025-05-15",
     "model": "Zeekr 009 Max",
-    "price": 6490000,
+    "price": "300万円",
     "status": "製造中",
     "depositPaid": false
   },
@@ -22,7 +22,7 @@
     "type": "購入",
     "date": "2025-06-25",
     "model": "Zeekr 009 Ultra",
-    "price": 7290000,
+    "price": "500万円",
     "status": "出荷済",
     "depositPaid": true
   },
@@ -31,7 +31,7 @@
     "type": "予約",
     "date": "2025-07-01",
     "model": "Zeekr 009 Pro",
-    "price": 5690000,
+    "price": "600万円",
     "status": "確認中",
     "depositPaid": false
   },
@@ -40,7 +40,7 @@
     "type": "購入",
     "date": "2025-04-10",
     "model": "Zeekr 009 Max",
-    "price": 6490000,
+    "price": "800万円",
     "status": "納車完了",
     "depositPaid": true
   },
@@ -49,7 +49,7 @@
     "type": "予約",
     "date": "2025-06-05",
     "model": "Zeekr 009 Pro",
-    "price": 5690000,
+    "price": "550万円",
     "status": "製造中",
     "depositPaid": true
   },
@@ -58,7 +58,7 @@
     "type": "購入",
     "date": "2025-05-20",
     "model": "Zeekr 009 Ultra",
-    "price": 7290000,
+    "price": "610万円",
     "status": "出荷済",
     "depositPaid": true
   },
@@ -67,7 +67,7 @@
     "type": "予約",
     "date": "2025-06-30",
     "model": "Zeekr 009 Max",
-    "price": 6490000,
+    "price": "２００万円",
     "status": "確認中",
     "depositPaid": false
   },
@@ -76,7 +76,7 @@
     "type": "購入",
     "date": "2025-03-15",
     "model": "Zeekr 009 Pro",
-    "price": 5690000,
+    "price": "720万円",
     "status": "納車完了",
     "depositPaid": true
   },
@@ -85,7 +85,7 @@
     "type": "予約",
     "date": "2025-07-05",
     "model": "Zeekr 009 Ultra",
-    "price": 7290000,
+    "price": "860万円",
     "status": "製造中",
     "depositPaid": false
   }

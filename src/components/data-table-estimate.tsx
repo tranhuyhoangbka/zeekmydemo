@@ -105,13 +105,13 @@ import {
 } from "@/components/ui/tabs"
 
 export const schema = z.object({
-  id: z.string(),
-  type: z.string(),
-  date: z.string(),
+  estimateId: z.string(),
+  createdAt: z.string(),
   model: z.string(),
+  bodyColor: z.string(),
+  seatConfig: z.string(),
+  interiorTrim: z.string(),
   price: z.number(),
-  status: z.string(),
-  depositPaid: z.boolean(),
 })
 
 // Create a separate component for the drag handle
@@ -136,40 +136,36 @@ function DragHandle({ id }: { id: number }) {
 
 const columns: ColumnDef<z.infer<typeof schema>>[] = [
   { 
-    accessorKey: "id",
-    header: "注文番号",
-    cell: ({ row }) => <TableCellViewer item={row.id} />,
-  },
-  { 
-    accessorKey: "type",
-    header: "種別",
-    cell: ({ row }) => <TableCellViewer item={row.type} />,
-  },
-  { 
-    accessorKey: "date",
-    header: "日付",
-    cell: ({ row }) => <TableCellViewer item={row.date} />,
+    accessorKey: "createdAt",
+    header: "日時",
+    cell: ({ row }) => <TableCellViewer item={row.createdAt} />,
   },
   { 
     accessorKey: "model",
-    header: "モデル",
+    header: "車両",
     cell: ({ row }) => <TableCellViewer item={row.model} />,
   },
   { 
-    accessorKey: "price",
-    header: "金額",
-    cell: ({ row }) => <TableCellViewer item={row.price} />,
+    accessorKey: "customization.bodyColor",
+    header: "色",
+    cell: ({ row }) => <TableCellViewer item={row.customization.bodyColor} />,
   },
   { 
-    accessorKey: "status",
-    header: "ステータス",
-    cell: ({ row }) => <TableCellViewer item={row.status} />,
+    accessorKey: "customization.seatConfig",
+    header: "シート数",
+    cell: ({ row }) => <TableCellViewer item={row.customization.seatConfig} />,
   },
   { 
-    accessorKey: "depositPaid",
-    header: "頭金 ",
-    cell: ({ row }) => <TableCellViewer item={row.depositPaid} />,
+    accessorKey: "customization.interiorTrim",
+    header: "インテリア",
+    cell: ({ row }) => <TableCellViewer item={row.customization.interiorTrim} />,
   },
+  { 
+    accessorKey: "estimatedPrice_yen",
+    header: "見積金額 (円)",
+    cell: ({ row }) => <TableCellViewer item={row.estimatedPrice_yen} />,
+  },
+  
 ]
 
 function DraggableRow({ row }: { row: Row<z.infer<typeof schema>> }) {
@@ -193,12 +189,12 @@ function DraggableRow({ row }: { row: Row<z.infer<typeof schema>> }) {
           {cell.id.includes("depositPaid") ? (cell.getValue() ? "支払い済み" : "未払い") : cell.getValue()}
         </TableCell>
       ))}
-      <td><Button variant="outline">状況を見る</Button></td>
+      <td><Button variant="outline">詳細を見る</Button></td>
     </TableRow>
   )
 }
 
-export function DataTable({
+export function DataTableEstimate({
   data: initialData,
 }: {
   data: z.infer<typeof schema>[]
@@ -237,7 +233,7 @@ export function DataTable({
       columnFilters,
       pagination,
     },
-    getRowId: (row) => row.id.toString(),
+    getRowId: (row) => row.estimateId.toString(),
     enableRowSelection: true,
     onRowSelectionChange: setRowSelection,
     onSortingChange: setSorting,
@@ -287,9 +283,6 @@ export function DataTable({
             <SelectItem value="focus-documents">Focus Documents</SelectItem>
           </SelectContent>
         </Select>
-        <TabsList className="**:data-[slot=badge]:bg-muted-foreground/30 hidden **:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:px-1 @4xl/main:flex">
-          <TabsTrigger value="outline">購入/予約履歴</TabsTrigger>
-        </TabsList>
       </div>
       <TabsContent
         value="outline"
