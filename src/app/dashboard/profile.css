@@ -1,0 +1,11 @@
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profile-info {
+  flex-grow: 1;
+}
+.profile-edit-btn {
+  /* đặt button ở góc phải */
+}
