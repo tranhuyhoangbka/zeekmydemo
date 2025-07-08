@@ -103,6 +103,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
+import { useNavigate } from "react-router-dom"
 
 export const schema = z.object({
   id: z.string(),
@@ -134,43 +135,53 @@ function DragHandle({ id }: { id: number }) {
   )
 }
 
-const columns: ColumnDef<z.infer<typeof schema>>[] = [
-  { 
-    accessorKey: "id",
-    header: "注文番号",
-    cell: ({ row }) => <TableCellViewer item={row.id} />,
-  },
-  { 
-    accessorKey: "type",
-    header: "種別",
-    cell: ({ row }) => <TableCellViewer item={row.type} />,
-  },
-  { 
-    accessorKey: "date",
-    header: "日付",
-    cell: ({ row }) => <TableCellViewer item={row.date} />,
-  },
-  { 
-    accessorKey: "model",
-    header: "モデル",
-    cell: ({ row }) => <TableCellViewer item={row.model} />,
-  },
-  { 
-    accessorKey: "price",
-    header: "金額",
-    cell: ({ row }) => <TableCellViewer item={row.price} />,
-  },
-  { 
-    accessorKey: "status",
-    header: "ステータス",
-    cell: ({ row }) => <TableCellViewer item={row.status} />,
-  },
-  { 
-    accessorKey: "depositPaid",
-    header: "頭金 ",
-    cell: ({ row }) => <TableCellViewer item={row.depositPaid} />,
-  },
-]
+function getColumns(navigate: (path: string) => void): ColumnDef<z.infer<typeof schema>>[] {
+  return [
+    {
+      accessorKey: "id",
+      header: "注文番号",
+      cell: ({ row }) => <span>{row.original.id}</span>,
+    },
+    {
+      accessorKey: "type",
+      header: "種別",
+      cell: ({ row }) => <span>{row.original.type}</span>,
+    },
+    {
+      accessorKey: "date",
+      header: "注文日",
+      cell: ({ row }) => <span>{row.original.date}</span>,
+    },
+    {
+      accessorKey: "model",
+      header: "モデル",
+      cell: ({ row }) => <span>{row.original.model}</span>,
+    },
+    {
+      accessorKey: "price",
+      header: "金額",
+      cell: ({ row }) => <span>{row.original.model}</span>,
+    },
+    {
+      accessorKey: "status",
+      header: "ステータス",
+      cell: ({ row }) => {
+        const status = row.original.status
+        const id = row.original.id
+
+        return (
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => navigate(`/order-status?id=${id}`)}
+          >
+            {status}
+          </Button>
+        )
+      },
+    },
+  ]
+}
 
 function DraggableRow({ row }: { row: Row<z.infer<typeof schema>> }) {
   const { transform, transition, setNodeRef, isDragging } = useSortable({
@@ -226,7 +237,8 @@ export function DataTable({
     () => data?.map(({ id }) => id) || [],
     [data]
   )
-
+  const navigate = useNavigate()
+  const columns = React.useMemo(() => getColumns(navigate), [navigate])
   const table = useReactTable({
     data,
     columns,
@@ -462,7 +474,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
+function TableCellViewer({ item }: { item: string | number | boolean }) {
   const isMobile = useIsMobile()
 
   return (
