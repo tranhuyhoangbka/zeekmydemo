@@ -1,13 +1,20 @@
-import { Button } from "@/components/ui/button"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Page from "./app/dashboard/page"
+import OrderStatusPage from "./components/order-status"
+import SettingsPage from "./components/settings"
+import LoginPage from "./components/login"
 import "./app/globals.css"
-
 
 function App() {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Page></Page>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Page />} />
+        <Route path="/order-status" element={<OrderStatusPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
