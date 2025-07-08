@@ -3,6 +3,7 @@ import Dashboard from "./app/dashboard/page"
 import Estimates from "./app/estimate_histories/page"
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./app/globals.css"
+import { EstimateDetail } from "./app/estimate_detail/page";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         {/* public routes */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/estimates" element={<Estimates />} />
+        <Route path="/estimates/detail" element={<EstimateDetail />} />
 
         {/* protected routes */}
    
