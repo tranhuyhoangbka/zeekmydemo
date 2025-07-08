@@ -40,18 +40,18 @@ const data = {
   navMain: [
     {
       title: "マイページ",
-      url: "#",
+      url: "/",
       icon: IconDashboard,
       active: true,
     },
     {
       title: "見積履歴",
-      url: "#",
+      url: "/estimates",
       icon: IconListDetails,
     },
     {
       title: "車両注文状況",
-      url: "#",
+      url: "/order-status",
       icon: IconChartBar,
     },
     {

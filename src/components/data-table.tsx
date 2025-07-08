@@ -160,7 +160,7 @@ function getColumns(navigate: (path: string) => void): ColumnDef<z.infer<typeof 
     {
       accessorKey: "price",
       header: "金額",
-      cell: ({ row }) => <span>{row.original.model}</span>,
+      cell: ({ row }) => <span>{row.original.price}</span>,
     },
     {
       accessorKey: "status",
@@ -201,10 +201,9 @@ function DraggableRow({ row }: { row: Row<z.infer<typeof schema>> }) {
     >
       {row.getVisibleCells().map((cell) => (
         <TableCell key={cell.id}>
-          {cell.id.includes("depositPaid") ? (cell.getValue() ? "支払い済み" : "未払い") : cell.getValue()}
+          {flexRender(cell.column.columnDef.cell, cell.getContext())}
         </TableCell>
       ))}
-      <td><Button variant="outline">状況を見る</Button></td>
     </TableRow>
   )
 }

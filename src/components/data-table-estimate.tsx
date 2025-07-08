@@ -103,6 +103,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
+import { useNavigate, Link } from "react-router-dom";
 
 export const schema = z.object({
   estimateId: z.string(),
@@ -173,6 +174,8 @@ function DraggableRow({ row }: { row: Row<z.infer<typeof schema>> }) {
     id: row.original.id,
   })
 
+  const navigate = useNavigate();
+
   return (
     <TableRow
       data-state={row.getIsSelected() && "selected"}
@@ -186,10 +189,10 @@ function DraggableRow({ row }: { row: Row<z.infer<typeof schema>> }) {
     >
       {row.getVisibleCells().map((cell) => (
         <TableCell key={cell.id}>
-          {cell.id.includes("depositPaid") ? (cell.getValue() ? "支払い済み" : "未払い") : cell.getValue()}
+          {cell.id.includes("estimatedPrice_yen") ? (`${cell.getValue().toLocaleString() }円`) : cell.getValue()}
         </TableCell>
       ))}
-      <td><Button variant="outline">詳細を見る</Button></td>
+      <td><Button variant="outline" onClick={() => navigate("/estimates/detail") }>詳細を見る</Button></td>
     </TableRow>
   )
 }
