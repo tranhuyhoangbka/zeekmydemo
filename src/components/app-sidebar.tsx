@@ -39,26 +39,21 @@ const data = {
   },
   navMain: [
     {
-      title: "マイページ",
+      title: "顧客一覧",
       url: "/",
-      icon: IconDashboard,
-      active: true,
+      icon: IconSettings,
+    },
+    {
+      title: "注文一覧",
+      url: "/orders",
+      icon: IconListDetails,
     },
     {
       title: "見積履歴",
       url: "/estimates",
       icon: IconListDetails,
     },
-    {
-      title: "車両注文状況",
-      url: "/order-status",
-      icon: IconChartBar,
-    },
-    {
-      title: "設定",
-      url: "/settings",
-      icon: IconSettings,
-    },
+   
   ],
   navClouds: [
     {

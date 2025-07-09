@@ -1,16 +1,7 @@
-import { AppSidebar } from "@/components/app-sidebar"
-import { ChartAreaInteractive } from "@/components/chart-area-interactive"
-import { DataTable } from "@/components/data-table"
-import { SectionCards } from "@/components/section-cards"
-import { SiteHeader } from "@/components/site-header"
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/components/ui/sidebar"
-
+import { AppLayout } from "@/components/app-layout"
 import data from "./data.json"
-import { DataTableEstimate } from "@/components/data-table-estimate"
-import { useState } from "react"
+import { DataTableOrder } from "@/components/data-table-order"
+import { useState } from "react";
 
 export default function Page() {
   const [orderId, setOrderId] = useState('');
@@ -27,25 +18,63 @@ export default function Page() {
   };
 
   return (
-    <SidebarProvider
-      style={
-        {
-          "--sidebar-width": "calc(var(--spacing) * 72)",
-          "--header-height": "calc(var(--spacing) * 12)",
-        } as React.CSSProperties
-      }
-    >
-      <AppSidebar variant="inset" />
-      <SidebarInset>
-        <SiteHeader />
-        <div className="flex flex-1 flex-col">
-          <div className="@container/main flex flex-1 flex-col gap-2">
-            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-
-
-            <div className="space-y-4 mb-6 px-4 lg:px-6">
+    <AppLayout>
+      <div className="flex flex-col gap-4">
+      
+      <div className="space-y-4 mb-6 px-4 lg:px-6">
         {/* Row: Order ID */}
-
+        <div className="flex items-center space-x-4">
+          <label className="text-sm w-20">注文番号:</label>
+          <input
+            type="text"
+            placeholder="注文番号を入力"
+            value={orderId}
+            onChange={e => setOrderId(e.target.value)}
+            className="border rounded px-3 py-2 placeholder-gray-400 flex-1 max-w-xs"
+          />
+        </div>
+        {/* Row: Type */}
+        <div className="flex items-center space-x-4">
+          <label className="text-sm w-20">タイプ:</label>
+          <select
+            value={typeFilter}
+            onChange={e => setTypeFilter(e.target.value as any)}
+            className="border rounded px-3 py-2 text-gray-600 flex-1 max-w-xs"
+          >
+            <option value="">選択</option>
+            <option value="購入">購入</option>
+            <option value="予約">予約</option>
+          </select>
+        </div>
+        {/* Row: Model */}
+        <div className="flex items-center space-x-4">
+          <label className="text-sm w-20">モデル:</label>
+          <select
+            value={modelFilter}
+            onChange={e => setModelFilter(e.target.value as any)}
+            className="border rounded px-3 py-2 text-gray-600 flex-1 max-w-xs"
+          >
+            <option value="">選択</option>
+            <option value="Zeekr 009 Pro">Zeekr 009 Pro</option>
+            <option value="Zeekr 009 Max">Zeekr 009 Max</option>
+            <option value="Zeekr 009 Ultra">Zeekr 009 Ultra</option>
+          </select>
+        </div>
+        {/* Row: Status */}
+        <div className="flex items-center space-x-4">
+          <label className="text-sm w-20">ステータス:</label>
+          <select
+            value={statusFilter}
+            onChange={e => setStatusFilter(e.target.value as any)}
+            className="border rounded px-3 py-2 text-gray-600 flex-1 max-w-xs"
+          >
+            <option value="">選択</option>
+            <option value="確認中">確認中</option>
+            <option value="製造中">製造中</option>
+            <option value="出荷済">出荷済</option>
+          </select>
+        </div>
+        {/* Row: Date filters */}
         <div className="flex items-center space-x-4">
           <label className="text-sm w-20">作成日:</label>
           <input
@@ -62,57 +91,7 @@ export default function Page() {
             className="border rounded px-3 py-2"
           />
         </div>
-
-
-        {/* Row: Model */}
-        <div className="flex items-center space-x-4">
-          <label className="text-sm w-20">モデル:</label>
-          <select
-            value={modelFilter}
-            onChange={e => setModelFilter(e.target.value as any)}
-            className="border rounded px-3 py-2 text-gray-600 flex-1 max-w-xs"
-          >
-            <option value="">選択</option>
-            <option value="Zeekr 009 Pro">Zeekr 009 Pro</option>
-            <option value="Zeekr 009 Max">Zeekr 009 Max</option>
-            <option value="Zeekr 009 Ultra">Zeekr 009 Ultra</option>
-          </select>
-        </div>
-        <div className="flex items-center space-x-4">
-          <label className="text-sm w-20">色:</label>
-          <select
-            value={modelFilter}
-            onChange={e => setModelFilter(e.target.value as any)}
-            className="border rounded px-3 py-2 text-gray-600 flex-1 max-w-xs"
-          >
-            <option value="">選択</option>
-            <option value="Zeekr 009 Pro">マットブラック</option>
-            <option value="Zeekr 009 Max">パールホワイト</option>
-            <option value="Zeekr 009 Ultra">レッドメタリック</option>
-          </select>
-        </div>
-        {/* Row: Status */}
-        {/* Row: Date filters */}
-        
         {/* Row: Price filters */}
-        <div className="flex items-center space-x-4">
-          <label className="text-sm w-20">シート数:</label>
-          <input
-            type="number"
-            placeholder="最低シート数"
-            value={priceMin}
-            onChange={e => setPriceMin(e.target.value === '' ? '' : Number(e.target.value))}
-            className="border rounded px-3 py-2 placeholder-gray-400 flex-1 max-w-xs"
-          />
-          <span className="mx-2">～</span>
-          <input
-            type="number"
-            placeholder="最高シート数"
-            value={priceMax}
-            onChange={e => setPriceMax(e.target.value === '' ? '' : Number(e.target.value))}
-            className="border rounded px-3 py-2 placeholder-gray-400 flex-1 max-w-xs"
-          />
-        </div>
         <div className="flex items-center space-x-4">
           <label className="text-sm w-20">価格:</label>
           <input
@@ -142,12 +121,8 @@ export default function Page() {
         </div>
       </div>
 
-
-              <DataTableEstimate data={data} />
-            </div>
-          </div>
-        </div>
-      </SidebarInset>
-    </SidebarProvider>
+        <DataTableOrder data={data} />
+      </div>
+    </AppLayout>
   )
 }
