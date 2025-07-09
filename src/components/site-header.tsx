@@ -15,9 +15,6 @@ export function SiteHeader() {
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
-          {location.pathname === "/" && (
-            <h1 className="text-base font-medium">マイページ</h1>
-          )}
 
           {location.pathname === "/estimates" && (
             <>
@@ -29,7 +26,7 @@ export function SiteHeader() {
 
           {location.pathname === "/order-status" && (
             <>
-              <Link to="/">マイページ</Link> /
+              <Link to="/orders">注文一覧</Link> /
               <h1 className="text-base font-medium">車両注文状況</h1>
             </>
             
@@ -37,7 +34,7 @@ export function SiteHeader() {
 
         {location.pathname === "/settings" && (
             <>
-              <Link to="/">マイページ</Link> /
+              <Link to="/">顧客一覧</Link> /
               <h1 className="text-base font-medium">設定</h1>
             </>
             
@@ -48,6 +45,21 @@ export function SiteHeader() {
               <Link to="/">マイページ</Link> /
               <Link to="/estimates">見積履歴</Link> /
               <h1 className="text-base font-medium">見積詳細</h1>
+            </>
+            
+          )}
+
+          {location.pathname === "/" && (
+            <>
+              <h1 className="text-base font-medium">顧客一覧</h1>
+            </>
+            
+          )}
+
+          {location.pathname === "/dashboard" && (
+            <>
+              <Link to="/">顧客一覧</Link> /
+              <h1 className="text-base font-medium">顧客詳細情報</h1>
             </>
             
           )}

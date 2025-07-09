@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "山田 太郎",
+    "email": "taro.yamada@example.co.jp",
+    "phone": "090-1234-5678",
+    "address": "東京都渋谷区神南1-19-11"
+  },
+  {
+    "id": 2,
+    "name": "佐藤 花子",
+    "email": "hanako.sato@example.co.jp",
+    "phone": "080-2345-6789",
+    "address": "大阪府大阪市北区梅田3-1-1"
+  },
+  {
+    "id": 3,
+    "name": "鈴木 次郎",
+    "email": "jiro.suzuki@example.co.jp",
+    "phone": "090-3456-7890",
+    "address": "愛知県名古屋市中村区名駅2-45-10"
+  },
+  {
+    "id": 4,
+    "name": "高橋 美咲",
+    "email": "misaki.takahashi@example.co.jp",
+    "phone": "070-4567-8901",
+    "address": "福岡県福岡市中央区天神2-8-41"
+  },
+  {
+    "id": 5,
+    "name": "伊藤 健一",
+    "email": "kenichi.ito@example.co.jp",
+    "phone": "080-5678-9012",
+    "address": "北海道札幌市中央区北1条西2丁目"
+  },
+  {
+    "id": 6,
+    "name": "渡辺 千尋",
+    "email": "chihiro.watanabe@example.co.jp",
+    "phone": "090-6789-0123",
+    "address": "京都府京都市中京区烏丸通御池上ル"
+  },
+  {
+    "id": 7,
+    "name": "中村 誠",
+    "email": "makoto.nakamura@example.co.jp",
+    "phone": "070-7890-1234",
+    "address": "神奈川県横浜市西区みなとみらい2-2-1"
+  },
+  {
+    "id": 8,
+    "name": "小林 玲奈",
+    "email": "rena.kobayashi@example.co.jp",
+    "phone": "080-8901-2345",
+    "address": "千葉県千葉市中央区新町1000"
+  },
+  {
+    "id": 9,
+    "name": "加藤 翔太",
+    "email": "shota.kato@example.co.jp",
+    "phone": "090-9012-3456",
+    "address": "埼玉県さいたま市大宮区桜木町1-7-5"
+  },
+  {
+    "id": 10,
+    "name": "山本 結衣",
+    "email": "yui.yamamoto@example.co.jp",
+    "phone": "070-0123-4567",
+    "address": "広島県広島市中区基町6-27"
+  }
+]
