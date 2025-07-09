@@ -10,6 +10,8 @@ import {
 
 import data from "./data.json"
 import { DataTableEstimate } from "@/components/data-table-estimate"
+import ImageUrl from './images/black.webp'
+
 const estimate = {
   estimateId: "E1001",
   createdAt: "2025-06-10T14:23:00Z",
@@ -77,7 +79,7 @@ export const EstimateDetail: React.FC = () => {
         {/* Left: Car Image */}
         <div className="flex-1">
           <img
-            src={imageUrl}
+            src={ImageUrl}
             alt={`${model} 画像`}
             className="w-full h-auto object-cover"
           />

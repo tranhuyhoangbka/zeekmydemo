@@ -18,7 +18,6 @@ export function SiteHeader() {
 
           {location.pathname === "/estimates" && (
             <>
-              <Link to="/">マイページ</Link> /
               <h1 className="text-base font-medium">見積履歴</h1>
             </>
             
@@ -32,9 +31,15 @@ export function SiteHeader() {
             
           )}
 
+          {location.pathname === "/orders" && (
+            <>
+              <h1 className="text-base font-medium">注文一覧</h1>
+            </>
+            
+          )}
+
         {location.pathname === "/settings" && (
             <>
-              <Link to="/">顧客一覧</Link> /
               <h1 className="text-base font-medium">設定</h1>
             </>
             
@@ -42,7 +47,6 @@ export function SiteHeader() {
 
           {location.pathname === "/estimates/detail" && (
             <>
-              <Link to="/">マイページ</Link> /
               <Link to="/estimates">見積履歴</Link> /
               <h1 className="text-base font-medium">見積詳細</h1>
             </>
@@ -51,14 +55,29 @@ export function SiteHeader() {
 
           {location.pathname === "/" && (
             <>
+              <h1 className="text-base font-medium"></h1>
+            </>
+            
+          )}
+
+          {location.pathname === "/customers" && (
+            <>
               <h1 className="text-base font-medium">顧客一覧</h1>
             </>
             
           )}
 
-          {location.pathname === "/dashboard" && (
+          {location.pathname === "/profile" && (
             <>
-              <Link to="/">顧客一覧</Link> /
+              <Link to="/customers">顧客一覧</Link> /
+              <h1 className="text-base font-medium">顧客詳細情報</h1>
+            </>
+            
+          )}
+
+          {location.pathname === "/edit-profile" && (
+            <>
+              <Link to="/customers">顧客一覧</Link> /
               <h1 className="text-base font-medium">顧客詳細情報</h1>
             </>
             

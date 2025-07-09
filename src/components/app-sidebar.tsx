@@ -39,8 +39,13 @@ const data = {
   },
   navMain: [
     {
-      title: "顧客一覧",
+      title: "ダッシュボード",
       url: "/",
+      icon: IconSettings,
+    },
+    {
+      title: "顧客一覧",
+      url: "/customers",
       icon: IconSettings,
     },
     {
@@ -52,6 +57,11 @@ const data = {
       title: "見積履歴",
       url: "/estimates",
       icon: IconListDetails,
+    },
+    {
+      title: "設定",
+      url: "/settings",
+      icon: IconSettings,
     },
    
   ],

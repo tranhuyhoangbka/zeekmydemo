@@ -11,11 +11,7 @@
     "specs": {
       "batteryCapacity_kWh": 100,
       "range_km": 550,
-      "dimensions_mm": {
-        "length": 4990,
-        "width": 1990,
-        "height": 1620
-      },
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
       "acceleration_0_100_kmh_s": 4.5
     },
     "estimatedPrice_yen": 5790000
@@ -32,11 +28,7 @@
     "specs": {
       "batteryCapacity_kWh": 100,
       "range_km": 550,
-      "dimensions_mm": {
-        "length": 4990,
-        "width": 1990,
-        "height": 1620
-      },
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
       "acceleration_0_100_kmh_s": 4.5
     },
     "estimatedPrice_yen": 7450000
@@ -53,11 +45,7 @@
     "specs": {
       "batteryCapacity_kWh": 100,
       "range_km": 550,
-      "dimensions_mm": {
-        "length": 4990,
-        "width": 1990,
-        "height": 1620
-      },
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
       "acceleration_0_100_kmh_s": 4.5
     },
     "estimatedPrice_yen": 6290000
@@ -74,11 +62,7 @@
     "specs": {
       "batteryCapacity_kWh": 100,
       "range_km": 550,
-      "dimensions_mm": {
-        "length": 4990,
-        "width": 1990,
-        "height": 1620
-      },
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
       "acceleration_0_100_kmh_s": 4.5
     },
     "estimatedPrice_yen": 7590000
@@ -95,13 +79,179 @@
     "specs": {
       "batteryCapacity_kWh": 100,
       "range_km": 550,
-      "dimensions_mm": {
-        "length": 4990,
-        "width": 1990,
-        "height": 1620
-      },
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
       "acceleration_0_100_kmh_s": 4.5
     },
     "estimatedPrice_yen": 5940000
+  },
+  {
+    "estimateId": "E1006",
+    "createdAt": "2025-07-07T10:15:00Z",
+    "model": "Zeekr 009 Max",
+    "customization": {
+      "bodyColor": "ブルーメタリック",
+      "seatConfig": "7人乗り",
+      "interiorTrim": "レザー・ベージュ"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 560,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.3
+    },
+    "estimatedPrice_yen": 6390000
+  },
+  {
+    "estimateId": "E1007",
+    "createdAt": "2025-07-08T14:50:00Z",
+    "model": "Zeekr 009 Pro",
+    "customization": {
+      "bodyColor": "レッドメタリック",
+      "seatConfig": "6人乗り",
+      "interiorTrim": "ファブリック・グレー"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 550,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.5
+    },
+    "estimatedPrice_yen": 5890000
+  },
+  {
+    "estimateId": "E1008",
+    "createdAt": "2025-07-09T09:20:00Z",
+    "model": "Zeekr 009 Ultra",
+    "customization": {
+      "bodyColor": "マットブラック",
+      "seatConfig": "7人乗り",
+      "interiorTrim": "レザー・ブラック"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 555,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.4
+    },
+    "estimatedPrice_yen": 7650000
+  },
+  {
+    "estimateId": "E1009",
+    "createdAt": "2025-07-10T12:00:00Z",
+    "model": "Zeekr 009 Max",
+    "customization": {
+      "bodyColor": "パールホワイト",
+      "seatConfig": "6人乗り",
+      "interiorTrim": "レザー・ブラック"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 560,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.3
+    },
+    "estimatedPrice_yen": 6490000
+  },
+  {
+    "estimateId": "E1010",
+    "createdAt": "2025-07-11T08:45:00Z",
+    "model": "Zeekr 009 Pro",
+    "customization": {
+      "bodyColor": "パールホワイト",
+      "seatConfig": "6人乗り",
+      "interiorTrim": "レザー・ベージュ"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 550,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.5
+    },
+    "estimatedPrice_yen": 5990000
+  },
+  {
+    "estimateId": "E1011",
+    "createdAt": "2025-07-12T14:00:00Z",
+    "model": "Zeekr 009 Ultra",
+    "customization": {
+      "bodyColor": "レッドメタリック",
+      "seatConfig": "7人乗り",
+      "interiorTrim": "レザー・ブラック"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 555,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.4
+    },
+    "estimatedPrice_yen": 7590000
+  },
+  {
+    "estimateId": "E1012",
+    "createdAt": "2025-07-13T11:30:00Z",
+    "model": "Zeekr 009 Max",
+    "customization": {
+      "bodyColor": "マットブラック",
+      "seatConfig": "7人乗り",
+      "interiorTrim": "レザー・ブラック"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 560,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.3
+    },
+    "estimatedPrice_yen": 6640000
+  },
+  {
+    "estimateId": "E1013",
+    "createdAt": "2025-07-14T16:20:00Z",
+    "model": "Zeekr 009 Pro",
+    "customization": {
+      "bodyColor": "レッドメタリック",
+      "seatConfig": "7人乗り",
+      "interiorTrim": "ファブリック・グレー"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 550,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.5
+    },
+    "estimatedPrice_yen": 6190000
+  },
+  {
+    "estimateId": "E1014",
+    "createdAt": "2025-07-15T09:15:00Z",
+    "model": "Zeekr 009 Ultra",
+    "customization": {
+      "bodyColor": "パールホワイト",
+      "seatConfig": "6人乗り",
+      "interiorTrim": "レザー・ベージュ"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 555,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.4
+    },
+    "estimatedPrice_yen": 7390000
+  },
+  {
+    "estimateId": "E1015",
+    "createdAt": "2025-07-16T12:40:00Z",
+    "model": "Zeekr 009 Max",
+    "customization": {
+      "bodyColor": "レッドメタリック",
+      "seatConfig": "6人乗り",
+      "interiorTrim": "レザー・ブラック"
+    },
+    "specs": {
+      "batteryCapacity_kWh": 100,
+      "range_km": 560,
+      "dimensions_mm": { "length": 4990, "width": 1990, "height": 1620 },
+      "acceleration_0_100_kmh_s": 4.3
+    },
+    "estimatedPrice_yen": 6790000
   }
 ]
